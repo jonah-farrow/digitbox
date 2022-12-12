@@ -485,6 +485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   receiver: {fileID: 0}
+  isLevel: 0
+  levelName: Level_01
 --- !u!1 &2964461189531176632
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,14 +836,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ba87bc0ffe9154d8bf1ecbf08e1c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  portal: {fileID: 2964461188850547726}
-  otherPortal: {fileID: 0}
+  isEntrance: 1
+  levelName: Level_01
 --- !u!1001 &2964461189648489815
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 2964461189531176615}
     m_Modifications:
     - target: {fileID: 111946, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
@@ -929,6 +931,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
 --- !u!4 &2964461189648105009 stripped
 Transform:

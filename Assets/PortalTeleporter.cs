@@ -7,11 +7,25 @@ public class PortalTeleporter : MonoBehaviour
     public Transform player;
     public Transform receiver;
     private bool playerIsOverlapping = false;
+    public bool isLevel;
+    public string levelName;
+
+    void Start() {
+        player = GameObject.Find("FirstPerson-AIO").transform;
+        receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(4).GetChild(1) : 
+            GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
+    }
 
     // Update is called once per frame
     void Update()
     {
-       if(playerIsOverlapping){
+        if(receiver == null){
+            receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(4).GetChild(1) : GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
+            Debug.Log(transform.root);
+            Debug.Log(isLevel);
+            Debug.Log(GameObject.Find(levelName));
+        }
+        if(playerIsOverlapping){
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
             Debug.Log("DOG PRODUCT: " + dotProduct);
