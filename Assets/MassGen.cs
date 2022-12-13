@@ -24,17 +24,23 @@ public class MassGen : MonoBehaviour
         levelsToGenerate = 0;
         while(objectQuantity < 20){
             randomYPos = Random.Range(0,360);
-            xPos = Random.Range(-77,77);
-            zPos = Random.Range(-77, 77);
-            yPos = Random.Range(10,200);
-           
-            Instantiate(theCube, new Vector3(xPos,yPos,zPos), transform.rotation);
+            
             if(levelsToGenerate < 1)
             {
-                Instantiate(theLevel, new Vector3(xPos,yPos,zPos), transform.rotation);
+                xPos = Random.Range(-77,77);
+                zPos = Random.Range(-77, 77);
+                yPos = Random.Range(10, 500);
+
+                Instantiate(theLevel, new Vector3(xPos,yPos,zPos), transform.rotation); // change transform rotate to be use randomYPos on y-axis so each faces different way
             }
 
-            yield return new WaitForSeconds(0.1f);
+            xPos = Random.Range(-77,77);
+            zPos = Random.Range(-77, 77);
+            yPos = Random.Range(10, 500);
+
+            Instantiate(theCube, new Vector3(xPos,yPos,zPos), transform.rotation);
+
+            yield return new WaitForSeconds(0.1f); // perhaps increase this if we have a UI 3,2,1 start at the beginning of game
             levelsToGenerate +=1;
             objectQuantity += 1;
         }
