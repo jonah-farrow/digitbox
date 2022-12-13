@@ -25,6 +25,10 @@ public class PortalTeleporter : MonoBehaviour
             Debug.Log(isLevel);
             Debug.Log(GameObject.Find(levelName));
         }
+    }
+
+    void LateUpdate()
+    {
         if(playerIsOverlapping){
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
@@ -40,7 +44,7 @@ public class PortalTeleporter : MonoBehaviour
                 Debug.Log("POSITION OFFSET: " + positionOffset + " RECEIVER POSITION: " + receiver.position);
                 playerIsOverlapping = false;
             }
-       } 
+       }     
     }
 
     void OnTriggerEnter(Collider other) {
