@@ -2617,6 +2617,22 @@ PrefabInstance:
       propertyPath: theCube
       value: 
       objectReference: {fileID: 8290297876302952104, guid: 4b95e0509ed4ea9488af610531f3aec4, type: 3}
+    - target: {fileID: 1913096140736028276, guid: bfa04f3116c93cc4ab7a7327a03dd93a, type: 3}
+      propertyPath: theBarrel
+      value: 
+      objectReference: {fileID: 1840171273809178, guid: bcffb14010940874eaf93a06b1f70df9, type: 3}
+    - target: {fileID: 1913096140736028276, guid: bfa04f3116c93cc4ab7a7327a03dd93a, type: 3}
+      propertyPath: theComputer
+      value: 
+      objectReference: {fileID: 1193185885239410, guid: a31cc91b37ebdf647bbd06ff06140003, type: 3}
+    - target: {fileID: 1913096140736028276, guid: bfa04f3116c93cc4ab7a7327a03dd93a, type: 3}
+      propertyPath: theScifiBox
+      value: 
+      objectReference: {fileID: 1231668379462494, guid: 10fe2af0159f56e4395fa21beb64e559, type: 3}
+    - target: {fileID: 1913096140736028276, guid: bfa04f3116c93cc4ab7a7327a03dd93a, type: 3}
+      propertyPath: theConnectedComputer
+      value: 
+      objectReference: {fileID: 1931886439230648, guid: 8f0250ba2b1b4e8418caf4aa132dd277, type: 3}
     - target: {fileID: 1913096140736028277, guid: bfa04f3116c93cc4ab7a7327a03dd93a, type: 3}
       propertyPath: m_Name
       value: GameObject
