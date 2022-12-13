@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PortalTeleporter : MonoBehaviour
 {
-    public Transform player;
-    public Transform receiver;
+    private Transform player;
+    private Transform receiver;
     private bool playerIsOverlapping = false;
     public bool isLevel;
     public string levelName;
@@ -13,7 +13,7 @@ public class PortalTeleporter : MonoBehaviour
     void Start() {
         player = GameObject.Find("FirstPerson-AIO").transform;
         receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(4).GetChild(1) : 
-            GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
+            GameObject.Find(levelName).transform.GetChild(1).GetChild(1);
     }
 
     // Update is called once per frame

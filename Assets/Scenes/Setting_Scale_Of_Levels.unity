@@ -370,10 +370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbfd74e075975349af1534435a0ed08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 691957166}
-  receiver: {fileID: 1335494921}
   isLevel: 1
-  levelName: Level_01_Entrance
+  levelName: Level_01_Entrance(Clone)
 --- !u!65 &39032863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1778,11 +1776,6 @@ PrefabInstance:
     - {fileID: 81419976148993170, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
---- !u!4 &1335494921 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2964461189242249886, guid: 51d226544d31d8349a4a7845326dc92b, type: 3}
-  m_PrefabInstance: {fileID: 2964461188193020823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1407851057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4288335847994348, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
@@ -2189,11 +2182,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1944815095 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2964461190115683936, guid: 51d226544d31d8349a4a7845326dc92b, type: 3}
-  m_PrefabInstance: {fileID: 2964461188193020823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2063084400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,7 +2211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b13b67c9746a644b427dda286b4cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraA: {fileID: 1944815095}
+  levelID: Level_01
   cameraB: {fileID: 1010553486}
   cameraMatB: {fileID: 2100000, guid: 180e9c3db06ba2643a0a7bd73eff3992, type: 2}
   cameraMatA: {fileID: 2100000, guid: 955728d2f6715d9408df109e327095b6, type: 2}
