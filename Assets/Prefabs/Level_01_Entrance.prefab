@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4531311852912646046}
   - component: {fileID: 2964461188231230149}
   - component: {fileID: 2964461188231230150}
+  - component: {fileID: -1998971647345691692}
   m_Layer: 0
   m_Name: Level_01_Entrance
   m_TagString: Untagged
@@ -115,6 +116,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9954544, y: 2.0000005, z: 2.0000005}
   m_Center: {x: 0.0022743226, y: 7.724305e-18, z: 2.0446644e-24}
+--- !u!114 &-1998971647345691692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729894336506345035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507849d607502aa4581be1fe6b5a9938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xPos: 0
+  yPos: 0
+  zPos: 0.1
 --- !u!1 &2964461188818876182
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +865,7 @@ GameObject:
   - component: {fileID: 5210693458882913201}
   - component: {fileID: 6507718039083542634}
   - component: {fileID: 662542480599392028}
+  - component: {fileID: 3511054716601162391}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -935,6 +952,24 @@ CapsuleCollider:
   m_Height: 2.000001
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: -0.0000028610211, z: -0.000045865796}
+--- !u!114 &3511054716601162391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7557824383722985492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.03906226, g: 1, b: 0, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2964461189648489815
 PrefabInstance:
   m_ObjectHideFlags: 0
