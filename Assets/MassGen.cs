@@ -5,7 +5,6 @@ using UnityEngine;
 public class MassGen : MonoBehaviour
 {
     public GameObject theLevel;
-    public GameObject theCube;
     public GameObject theScifiBox;
     public GameObject theComputer;
     public GameObject theConnectedComputer;
@@ -32,36 +31,32 @@ public class MassGen : MonoBehaviour
             
             if(!isLevelGenerated)
             {
-                xPos = Random.Range(-77,77);
-                zPos = Random.Range(-77, 77);
-                yPos = Random.Range(10, 500);
+                xPos = Random.Range(-50,50);
+                zPos = Random.Range(-50, 50);
+                yPos = Random.Range(300, 500);
 
                 Instantiate(theLevel, new Vector3(xPos,yPos,zPos), transform.rotation); // change transform rotate to be use randomYPos on y-axis so each faces different way
                 isLevelGenerated = true;
             }
 
-            xPos = Random.Range(-87,87);
-            zPos = Random.Range(-87, 87);
-            yPos = Random.Range(10, 500);
+            xPos = Random.Range(-80,80);
+            zPos = Random.Range(-80, 80);
+            yPos = Random.Range(20, 500);
 
             switch (randObjGen){
                 case 0:
-                    Instantiate(theCube, new Vector3(xPos,yPos,zPos), transform.rotation);
-                break;
-
-                case 1:
                     Instantiate(theScifiBox, new Vector3(xPos,yPos,zPos), transform.rotation);
                 break;
 
-                case 2:
+                case 1:
                     Instantiate(theComputer, new Vector3(xPos,yPos,zPos), transform.rotation);
                 break;
 
-                case 3:
+                case 2:
                     Instantiate(theConnectedComputer, new Vector3(xPos,yPos,zPos), transform.rotation);
                 break;
 
-                case 4:
+                case 3:
                     Instantiate(theBarrel, new Vector3(xPos,yPos,zPos), transform.rotation);
                 break;
             }
