@@ -12,9 +12,6 @@
 /[Mm]emoryCaptures/
 <<<<<<< HEAD
 /[Uu]ser[Ss]ettings/
-=======
-./UserSettings/
->>>>>>> 2252650960e826d17110528f9003bdbb2f87dcf8
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
