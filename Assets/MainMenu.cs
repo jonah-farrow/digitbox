@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
     }
 
     void OnMouseUp() {
+        //Checks to see whether you've clicked start or quit, then either loads the scene or quits.
         if(isStart){
             Application.LoadLevel(1);
         }

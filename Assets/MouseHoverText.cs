@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Meant to change color of text but I have abandoned it
 public class MouseHoverText : MonoBehaviour
 {
     // Start is called before the first frame update
