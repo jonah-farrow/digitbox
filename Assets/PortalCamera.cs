@@ -11,9 +11,11 @@ public class PortalCamera : MonoBehaviour
     public string levelName;
 
     void Start() {
-        playerCamera = GameObject.Find("FirstPerson-AIO").transform.GetChild(0).GetChild(0).transform;
-        otherPortal = isEntrance ? GameObject.Find(levelName).transform.GetChild(4).transform : GameObject.Find(levelName).transform.GetChild(1).transform;
-        portal = transform.root.GetChild(1);
+        try{
+            playerCamera = GameObject.Find("FirstPerson-AIO Variant").transform.GetChild(0).GetChild(0).transform;
+            otherPortal = isEntrance ? GameObject.Find(levelName).transform.GetChild(1).transform : GameObject.Find(levelName).transform.GetChild(2).transform;
+            portal = isEntrance ? transform.root.GetChild(1) : transform.root.GetChild(2);
+        } catch {}
     }
 
     // Update is called once per frame
@@ -21,7 +23,11 @@ public class PortalCamera : MonoBehaviour
     {
         if(otherPortal == null)
         {
-            otherPortal = isEntrance ? GameObject.Find(levelName).transform.GetChild(4).transform : GameObject.Find(levelName).transform.GetChild(1).transform;
+            otherPortal = isEntrance ? GameObject.Find(levelName).transform.GetChild(1).transform : GameObject.Find(levelName).transform.GetChild(2).transform;
+        }
+        if(portal == null)
+        {
+            portal = isEntrance ? transform.root.GetChild(2) : transform.root.GetChild(1);
         }
         
         Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;

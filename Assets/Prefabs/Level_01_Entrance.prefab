@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2964461188231230149}
   - component: {fileID: 2964461188231230150}
   - component: {fileID: -1998971647345691692}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Level_01_Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 2964461188818876178}
   - component: {fileID: 2964461188818876179}
   - component: {fileID: 2964461188818876180}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RenderPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 2964461188850547723}
   - component: {fileID: 2964461188850547724}
   - component: {fileID: 2964461188850547725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Portal_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 2964461189165031726}
   - component: {fileID: 2964461189165031727}
   - component: {fileID: 2964461189165031723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sensor_Send
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 2964461189242249886}
   - component: {fileID: 2964461189242249884}
   - component: {fileID: 2964461189242249885}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ColliderPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2964461189531176615}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Portal_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 2964461189827465728}
   - component: {fileID: 2964461189827465729}
   - component: {fileID: 2964461189827465730}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sensor_Receive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 2964461189988166175}
   - component: {fileID: 2964461189988166160}
   - component: {fileID: 2964461189988166161}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Portal_Slide_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 2964461190115683950}
   - component: {fileID: 2964461190115683936}
   - component: {fileID: 2964461190115683951}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 6507718039083542634}
   - component: {fileID: 662542480599392028}
   - component: {fileID: 3511054716601162391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,6 +981,30 @@ PrefabInstance:
     - target: {fileID: 111946, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
       propertyPath: m_Name
       value: magic_ring_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 111946, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 129964, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 148870, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 150376, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 171528, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 190194, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 402278, guid: 3e142e58a407a7048856096aab4c9f5e, type: 3}
       propertyPath: m_RootOrder

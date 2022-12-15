@@ -11,24 +11,29 @@ public class PortalTeleporter : MonoBehaviour
     public string levelName;
 
     void Start() {
-        player = GameObject.Find("FirstPerson-AIO").transform;
-        receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(4).GetChild(1) : 
-            GameObject.Find(levelName).transform.GetChild(1).GetChild(1);
+        //Finds the player in the scene
+        player = GameObject.Find("FirstPerson-AIO Variant").transform;
+        //Attempts to set the recieving plane, however due to the order of initialisation this may not always be possible
+        //at the start, hence the repeated call in Update and the try catch. The ternary allows us to use one script to set the receiver 
+        //plane despite whether we are entering or exiting a level.
+        try{
+            receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(1).GetChild(1) : 
+                GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
+        } catch {}
     }
 
     // Update is called once per frame
     void Update()
     {
+        //sets reciever if it was not able to previously.
         if(receiver == null){
-            receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(4).GetChild(1) : GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
-            Debug.Log(transform.root);
-            Debug.Log(isLevel);
-            Debug.Log(GameObject.Find(levelName));
+            receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(1).GetChild(1) : GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
         }
     }
 
     void LateUpdate()
     {
+        //If the player is overlapping with the teleporting plane, then the player is teleported to the other portal.
         if(playerIsOverlapping){
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
@@ -47,6 +52,7 @@ public class PortalTeleporter : MonoBehaviour
        }     
     }
 
+    //When the player collides with the teleporter the boolean is set to true so we know to teleport the player.
     void OnTriggerEnter(Collider other) {
         if(other.tag == "Player"){
             playerIsOverlapping = true;
@@ -54,6 +60,7 @@ public class PortalTeleporter : MonoBehaviour
         }
     }
 
+    //Sets the boolean to false so the player isn't constantly pinged back to the receiver constantly.
     void OnTriggerExit (Collider other){
         if(other.tag == "Player"){
             playerIsOverlapping = false;
