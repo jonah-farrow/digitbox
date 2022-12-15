@@ -25,7 +25,7 @@ public class MassGen : MonoBehaviour
     IEnumerator GenerateObjects(){
        
         isLevelGenerated = false;
-        while(objectQuantity < 20){
+        while(objectQuantity < 50){
             randObjGen = Random.Range(0,5); // Does not include level as we require a guranteed spawn of one
             randomYPos = Random.Range(0,360);
             

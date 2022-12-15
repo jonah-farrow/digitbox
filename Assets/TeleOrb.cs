@@ -10,6 +10,7 @@ public class TeleOrb : MonoBehaviour
         
     }
 
+    //Gives the orb it's initial force and velocity once shot.
     public void Init(float orbForce, Vector3 forward)
     {
         GetComponent<Rigidbody>().AddForce(forward * orbForce, ForceMode.Impulse);
@@ -19,5 +20,14 @@ public class TeleOrb : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        //if the orb has collided with the outside cylinder it doesn't teleport to avoid 'cheating'
+        if(other.name != "Cylinder"){
+            GameObject.Find("FirstPerson-AIO Variant").transform.position = transform.position;
+        }
+        Destroy(this.gameObject);
     }
 }
