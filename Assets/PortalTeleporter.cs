@@ -11,20 +11,26 @@ public class PortalTeleporter : MonoBehaviour
     public string levelName;
 
     void Start() {
-        player = GameObject.Find("FirstPerson-AIO").transform;
-        receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(4).GetChild(1) : 
-            GameObject.Find(levelName).transform.GetChild(1).GetChild(1);
+        player = GameObject.Find("FirstPerson-AIO Variant").transform;
+        try{
+            receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(1).GetChild(1) : 
+                GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
+        } catch {}
     }
 
     // Update is called once per frame
     void Update()
     {
         if(receiver == null){
-            receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(4).GetChild(1) : GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
+            receiver = !isLevel ? GameObject.Find(levelName).transform.GetChild(1).GetChild(1) : GameObject.Find(levelName).transform.GetChild(2).GetChild(1);
             Debug.Log(transform.root);
             Debug.Log(isLevel);
             Debug.Log(GameObject.Find(levelName));
         }
+    }
+
+    void LateUpdate()
+    {
         if(playerIsOverlapping){
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
@@ -40,7 +46,7 @@ public class PortalTeleporter : MonoBehaviour
                 Debug.Log("POSITION OFFSET: " + positionOffset + " RECEIVER POSITION: " + receiver.position);
                 playerIsOverlapping = false;
             }
-       } 
+       }     
     }
 
     void OnTriggerEnter(Collider other) {
