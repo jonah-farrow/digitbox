@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ // this was helped by https://www.youtube.com/watch?v=_5BnLwnKGa4
 public class CloseSesame : MonoBehaviour
 {
     [SerializeField] private GameObject movingDoor; // door asset to move

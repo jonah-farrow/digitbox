@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 71eed069af18cb44abb609e8bcc6ac3e
+  - enabled: 1
+    path: Assets/Scenes/TeleportGun.unity
+    guid: 1631061bdfa2ec14d898fb852debba79
   m_configObjects: {}

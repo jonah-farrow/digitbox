@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// This code was helped by this tutorial https://www.youtube.com/watch?v=-sNbIGMqbhs
 public class PortalTeleporter : MonoBehaviour
 {
     private Transform player;
