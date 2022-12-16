@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class OpenSesame : MonoBehaviour
 {
-    [SerializeField] private GameObject movingDoor;
-    [SerializeField] private GameObject levelExitSensor;
-    private float maximumOpening = 10f;
-    private float maximumClosing = 0f;
+    [SerializeField] private GameObject movingDoor; // door asset to move
+    [SerializeField] private GameObject levelExitSensor; // exit sensor
+    private float maximumOpening = 10f; // door open distnace
+    private float maximumClosing = 0f; // door closing distance
      
-    private float movementSpeed = 5f;
+    private float movementSpeed = 5f; // how fast door moves
      
-    private bool playerIsHere = false;
+    private bool playerIsHere = false; // is player in sensor
      
     // Start is called before the first frame update
     void Start()
@@ -22,28 +22,28 @@ public class OpenSesame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerIsHere){
-            if(movingDoor.transform.localPosition.y < maximumOpening){
-                movingDoor.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
+        if(playerIsHere){ // if player is colliding
+            if(movingDoor.transform.localPosition.y < maximumOpening){ // if the door is closed 
+                movingDoor.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f); // open the door
             }
         }else{
-            if(movingDoor.transform.localPosition.y > maximumClosing){
-                movingDoor.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
+            if(movingDoor.transform.localPosition.y > maximumClosing){ // if the door is open
+                movingDoor.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f); // close the door
             }
         } 
     }
      
     private void OnTriggerEnter(Collider col){
-        if(col.gameObject.tag == "Player"){
-            playerIsHere = true;
-            levelExitSensor.GetComponent<CloseSesame>().enabled = false;
+        if(col.gameObject.tag == "Player"){ // if sensor collide with player
+            playerIsHere = true; // player is here
+            levelExitSensor.GetComponent<CloseSesame>().enabled = false; // disable close door script (keep door open)
         }
     }
      
     private void OnTriggerExit(Collider col){
-        if(col.gameObject.tag == "Player"){
-            playerIsHere = false;
-            levelExitSensor.GetComponent<CloseSesame>().enabled = true;
+        if(col.gameObject.tag == "Player"){ // if exit with player
+            playerIsHere = false; // player is no longer here
+            levelExitSensor.GetComponent<CloseSesame>().enabled = true; // shut the door
         }
     }
 }

@@ -1,5 +1,5 @@
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
+// This shader was imported from https://github.com/Brackeys/Portal-In-Unity/blob/master/Portal/Assets/ScreenCutoutShader.shader
 Shader "Unlit/ScreenCutoutShader"
 {
 	Properties

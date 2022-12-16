@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xPos: 0
-  yPos: 0.1
+  yPos: 0.01
   zPos: 0
 --- !u!114 &5716338656062075024
 MonoBehaviour:

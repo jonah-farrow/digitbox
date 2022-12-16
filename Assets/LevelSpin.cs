@@ -16,6 +16,6 @@ public class LevelSpin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(xPos, yPos, zPos);
+        transform.Rotate(xPos, yPos, zPos); // simply rotate the object using the values provided
     }
 }

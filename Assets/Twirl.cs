@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class Twirl : MonoBehaviour
 {
-    public int typeOfTwirl;
-    public float xPos;
-    public float yPos;
-    public float zPos;
+    public float xPos; // value to rotate around x axis
+    public float yPos; // value to rotate around y axis
+
 
     // Start is called before the first frame update
     void Start()
     {
-        xPos = Random.Range(-0.1f, 0.1f);
-        yPos = Random.Range(-0.1f, 0.1f);
-        zPos = Random.Range(-0.1f, 0.1f);
+        xPos = Random.Range(-0.01f, 0.01f);
+        yPos = Random.Range(-0.01f, 0.01f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(xPos, yPos, zPos);
+        transform.Rotate(xPos, yPos, 0); // rotate object using randomly allocated x and y
     }
 }
